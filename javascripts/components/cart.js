@@ -1,11 +1,11 @@
-const bookObject = {
-    price: 123.78
-  };
-  
-  
-  // Get Method 
-  const getPrice = () => {
-    return bookObject.price;
-  };
+import {getPrice} from './store.js'
+import {printToDom} from '../helpers/util.js'
 
-  export {getPrice}
+let theCart = 0;
+
+const putInCart = () => {
+  theCart += getPrice();
+  printToDom('cartDiv', theCart);
+};
+
+export {putInCart};
