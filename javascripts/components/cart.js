@@ -4,7 +4,7 @@ import {printToDom} from '../helpers/util.js'
 let theCart = 0;
 
 const putInCart = () => {
-  theCart += getPrice();
+  theCart = getPrice();
   printToDom('cartDiv', theCart);
 };
 
